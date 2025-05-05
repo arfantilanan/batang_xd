@@ -1,500 +1,204 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <meta charset="utf-8" />
-  <style>
-    @import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
-* {
-  -webkit-font-smoothing: antialiased;
-  box-sizing: border-box;
-}
-html,
-body {
-  margin: 0px;
-  height: 100%;
-}
-/* a blue color as a generic focus style */
-button:focus-visible {
-  outline: 2px solid #4a90e2 !important;
-  outline: -webkit-focus-ring-color auto 5px !important;
-}
-a {
-  text-decoration: none;
-}
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Annie Fantilanan - Profile</title>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;800&family=Poppins:wght@600&display=swap" rel="stylesheet">
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-family: 'Manrope', sans-serif;
+        transition: all 0.3s ease;
+      }
 
-    .annie {
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
-  gap: 24px;
-  padding: 80px 52px;
-  position: relative;
-  background-color: #aa3b33;
-  border-top-width: 24px;
-  border-top-style: solid;
-  border-color: #65c9ff;
-  width: 100%;
-  min-width: 1440px;
-  min-height: 940.86px;
-}
+      body {
+        background-color: #121212;
+        color: #e0e0e0;
+        min-height: 100vh;
+      }
 
-.annie .frame {
-  gap: 32px;
-  display: inline-flex;
-  align-items: flex-start;
-  position: relative;
-  flex: 0 0 auto;
-}
+      header {
+        background-color: #1f1f1f;
+        padding: 20px 40px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 3px solid #65c9ff;
+      }
 
-.annie .div {
-  flex-direction: column;
-  justify-content: center;
-  gap: 21px;
-  display: inline-flex;
-  align-items: flex-start;
-  position: relative;
-  flex: 0 0 auto;
-}
+      header h1 {
+        font-family: 'Poppins', sans-serif;
+        font-size: 24px;
+        color: #65c9ff;
+      }
 
-.annie .team-card {
-  align-items: center;
-  padding: 50px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 24px;
-  position: relative;
-  align-self: stretch;
-  width: 100%;
-  flex: 0 0 auto;
-  background-color: #ffffff;
-  border-radius: 10.3px;
-  overflow: hidden;
-}
+      nav a {
+        color: #e0e0e0;
+        margin-left: 20px;
+        text-decoration: none;
+        font-weight: 500;
+        position: relative;
+      }
 
-.annie .content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 24px;
-  padding: 0px 16px;
-  position: relative;
-  align-self: stretch;
-  width: 100%;
-  flex: 0 0 auto;
-}
+      nav a:hover {
+        color: #65c9ff;
+      }
 
-.annie .info {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  position: relative;
-  align-self: stretch;
-  width: 100%;
-  flex: 0 0 auto;
-}
+      .container {
+        max-width: 1200px;
+        margin: 40px auto;
+        padding: 0 20px;
+      }
 
-.annie .title {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 4px;
-  position: relative;
-  align-self: stretch;
-  width: 100%;
-  flex: 0 0 auto;
-}
+      .profile {
+        background-color: #1e1e1e;
+        border-radius: 12px;
+        padding: 40px;
+        display: flex;
+        gap: 40px;
+        align-items: center;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+      }
 
-.annie .name {
-  position: relative;
-  align-self: stretch;
-  margin-top: -1.00px;
-  font-family: "Poppins-SemiBold", Helvetica;
-  font-weight: 600;
-  color: #08659f;
-  font-size: 28px;
-  text-align: center;
-  letter-spacing: 0;
-  line-height: 30px;
-}
+      .profile img {
+        width: 180px;
+        height: 180px;
+        border-radius: 50%;
+        border: 4px solid #65c9ff;
+        object-fit: cover;
+      }
 
-.annie .img {
-  position: relative;
-  width: 200px;
-  height: 200px;
-}
+      .info {
+        flex: 1;
+      }
 
-.annie .details {
-  display: inline-flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 8.11px;
-  position: relative;
-  flex: 0 0 auto;
-}
+      .info h2 {
+        font-size: 28px;
+        color: #65c9ff;
+        font-family: 'Poppins', sans-serif;
+        margin-bottom: 16px;
+      }
 
-.annie .row-item {
-  display: inline-flex;
-  justify-content: center;
-  gap: 16px;
-  align-items: center;
-  position: relative;
-  flex: 0 0 auto;
-}
+      .info-item {
+        margin-bottom: 8px;
+      }
 
-.annie .text-wrapper {
-  position: relative;
-  width: 97.84px;
-  height: 22.31px;
-  font-family: "Manrope-SemiBold", Helvetica;
-  font-weight: 600;
-  color: var(--grey-1);
-  font-size: 16px;
-  letter-spacing: 0;
-  line-height: normal;
-}
+      .info-item span {
+        font-weight: 600;
+        color: #aaa;
+        margin-right: 10px;
+      }
 
-.annie .text-wrapper-2 {
-  position: relative;
-  width: 168.81px;
-  margin-top: -0.51px;
-  font-family: "Manrope-Medium", Helvetica;
-  font-weight: 500;
-  color: var(--text);
-  font-size: 24px;
-  letter-spacing: 0;
-  line-height: normal;
-}
+      .quote {
+        font-size: 24px;
+        font-style: italic;
+        margin: 40px 0;
+        text-align: center;
+        color: #ccc;
+      }
 
-.annie .div-wrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 24px;
-  padding: 32px 50px;
-  position: relative;
-  align-self: stretch;
-  width: 100%;
-  flex: 0 0 auto;
-  background-color: #ffffff;
-  border-radius: 10.3px;
-  overflow: hidden;
-}
+      .section {
+        background-color: #1e1e1e;
+        border-radius: 12px;
+        padding: 30px;
+        margin-bottom: 30px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+      }
 
-.annie .p {
-  position: relative;
-  width: 354.33px;
-  height: 85.85px;
-  margin-top: -2.00px;
-  font-family: "Manrope-Medium", Helvetica;
-  font-weight: 500;
-  color: var(--text);
-  font-size: 50px;
-  letter-spacing: 0;
-  line-height: normal;
-}
+      .section h3 {
+        font-size: 20px;
+        color: #65c9ff;
+        margin-bottom: 16px;
+      }
 
-.annie .span {
-  font-family: "Manrope-Medium", Helvetica;
-  font-weight: 500;
-  color: #3a3d5b;
-  font-size: 50px;
-  letter-spacing: 0;
-}
+      .list-item {
+        display: flex;
+        align-items: center;
+        margin-bottom: 8px;
+      }
 
-.annie .text-wrapper-3 {
-  font-size: 24px;
-}
+      .list-item::before {
+        content: '•';
+        color: #65c9ff;
+        margin-right: 10px;
+      }
 
-.annie .stacked {
-  display: inline-flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 21px;
-  position: relative;
-  flex: 0 0 auto;
-}
+      .pills {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+      }
 
-.annie .group {
-  position: relative;
-  width: 507.04px;
-  height: 214.48px;
-  margin-right: -4.00px;
-}
+      .pill {
+        background-color: #333;
+        padding: 8px 16px;
+        border-radius: 20px;
+        font-size: 14px;
+        color: #fff;
+        cursor: default;
+      }
 
-.annie .text-wrapper-4 {
-  position: absolute;
-  width: 503px;
-  top: 0;
-  left: 0;
-  font-family: "Manrope-ExtraBold", Helvetica;
-  font-weight: 800;
-  color: var(--primary-2);
-  font-size: 24px;
-  letter-spacing: 0;
-  line-height: normal;
-}
-
-.annie .content-2 {
-  position: absolute;
-  width: 503px;
-  top: 49px;
-  left: 0;
-  font-family: "Manrope-Medium", Helvetica;
-  font-weight: 500;
-  color: var(--text);
-  font-size: 24px;
-  letter-spacing: 0;
-  line-height: normal;
-}
-
-.annie .group-2 {
-  position: relative;
-  width: 505.04px;
-  height: 173.46px;
-  margin-right: -2.00px;
-}
-
-.annie .list {
-  display: flex;
-  flex-direction: column;
-  width: 503.04px;
-  align-items: center;
-  gap: 10.99px;
-  position: absolute;
-  top: 49px;
-  left: 0;
-}
-
-.annie .bullet {
-  align-items: flex-start;
-  display: flex;
-  gap: 10.99px;
-  position: relative;
-  align-self: stretch;
-  width: 100%;
-  flex: 0 0 auto;
-}
-
-.annie .text-wrapper-5 {
-  position: relative;
-  width: 17.86px;
-  margin-top: -0.69px;
-  font-family: "Manrope-ExtraBold", Helvetica;
-  font-weight: 800;
-  color: var(--primary-1);
-  font-size: 24.7px;
-  letter-spacing: 0;
-  line-height: normal;
-}
-
-.annie .content-3 {
-  position: relative;
-  flex: 1;
-  margin-top: -0.69px;
-  font-family: "Manrope-Medium", Helvetica;
-  font-weight: 500;
-  color: var(--text);
-  font-size: 24px;
-  letter-spacing: 0;
-  line-height: normal;
-}
-
-.annie .bullet-2 {
-  align-items: center;
-  display: flex;
-  gap: 10.99px;
-  position: relative;
-  align-self: stretch;
-  width: 100%;
-  flex: 0 0 auto;
-}
-
-.annie .content-4 {
-  position: relative;
-  flex: 1;
-  font-family: "Manrope-Medium", Helvetica;
-  font-weight: 500;
-  color: var(--text);
-  font-size: 22px;
-  letter-spacing: 0;
-  line-height: normal;
-}
-
-.annie .team-card-2 {
-  align-items: flex-start;
-  padding: 32px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 24px;
-  position: relative;
-  align-self: stretch;
-  width: 100%;
-  flex: 0 0 auto;
-  background-color: #ffffff;
-  border-radius: 10.3px;
-  overflow: hidden;
-}
-
-.annie .text-wrapper-6 {
-  position: relative;
-  width: 166.24px;
-  margin-top: -2.00px;
-  font-family: "Manrope-ExtraBold", Helvetica;
-  font-weight: 800;
-  color: var(--primary-2);
-  font-size: 21.7px;
-  letter-spacing: 0;
-  line-height: normal;
-}
-
-.annie .row {
-  display: flex;
-  width: 483px;
-  gap: 7.23px;
-  padding: 2.41px;
-  align-items: center;
-  position: relative;
-  flex: 0 0 auto;
-}
-
-.annie .pill {
-  display: inline-flex;
-  align-items: center;
-  gap: 6.02px;
-  padding: 4.82px 14.46px;
-  position: relative;
-  flex: 0 0 auto;
-  background-color: var(--gray-6);
-  border-radius: 33.73px;
-}
-
-.annie .text-wrapper-7 {
-  position: relative;
-  width: fit-content;
-  margin-top: -0.60px;
-  font-family: "Manrope-Medium", Helvetica;
-  font-weight: 500;
-  color: #000000;
-  font-size: 19.3px;
-  letter-spacing: 0;
-  line-height: normal;
-}
-
-.annie .row-2 {
-  display: flex;
-  width: 343.82px;
-  gap: 7.23px;
-  padding: 2.41px;
-  align-items: center;
-  position: relative;
-  flex: 0 0 auto;
-}
-
-.annie .pill-2 {
-  margin-right: -63.32px;
-  display: inline-flex;
-  align-items: center;
-  gap: 6.02px;
-  padding: 4.82px 14.46px;
-  position: relative;
-  flex: 0 0 auto;
-  background-color: var(--gray-6);
-  border-radius: 33.73px;
-}
-
-  </style>
+      .pill:hover {
+        background-color: #65c9ff;
+        color: #000;
+      }
+    </style>
   </head>
   <body>
-    <div class="annie" data-model-id="3:36">
-      <div class="frame">
-        <div class="div">
-          <div class="team-card">
-            <div class="content">
-              <div class="info">
-                <div class="title"><div class="name">Annie Fantilanan</div></div>
-              </div>
-            </div>
-            <img class="img" src="img/annie.png" />
-            <div class="details">
-              <div class="row-item">
-                <div class="text-wrapper">AGE</div>
-                <div class="text-wrapper-2">28</div>
-              </div>
-              <div class="row-item">
-                <div class="text-wrapper">GENDER</div>
-                <div class="text-wrapper-2">Female</div>
-              </div>
-              <div class="row-item">
-                <div class="text-wrapper">STATUS</div>
-                <div class="text-wrapper-2">Married</div>
-              </div>
-              <div class="row-item">
-                <div class="text-wrapper">EDUCATION</div>
-                <div class="text-wrapper-2">BS Information Technology</div>
-              </div>
-              <div class="row-item">
-                <div class="text-wrapper">CITY</div>
-                <div class="text-wrapper-2">Iloilo City</div>
-              </div>
-            </div>
-          </div>
-          <div class="div-wrapper">
-            <p class="p"><span class="span">“</span> <span class="text-wrapper-3">Good things take time</span></p>
-          </div>
+    <header>
+      <h1><a href="index.html" style="text-decoration: none; color: #65c9ff;">Home</a></h1>
+      <nav>
+        <a href="#profile">Profile</a>
+        <a href="#bio">Bio</a>
+        <a href="#interests">Interests</a>
+      </nav>
+    </header>
+    <div class="container">
+      <section class="profile" id="profile">
+        <img src="img/annie.png" alt="Annie Fantilanan" />
+        <div class="info">
+          <h2>Annie Fantilanan</h2>
+          <div class="info-item"><span>Age:</span>28</div>
+          <div class="info-item"><span>Gender:</span>Female</div>
+          <div class="info-item"><span>Status:</span>Married</div>
+          <div class="info-item"><span>Education:</span>BS Information Technology</div>
+          <div class="info-item"><span>City:</span>Iloilo City</div>
         </div>
-        <div class="stacked">
-          <div class="div-wrapper">
-            <div class="group">
-              <div class="text-wrapper-4">Bio</div>
-              <p class="content-2">
-                She currenlty lives in Sydney. She finished her master in businesss and has just been promoted to Sales
-                Manager. She is currently single and like to go out with friends on long holidays.
-              </p>
-            </div>
-          </div>
-          <div class="div-wrapper">
-            <div class="group-2">
-              <div class="text-wrapper-4">Project Industry</div>
-              <div class="list">
-                <div class="bullet">
-                  <div class="text-wrapper-5">•</div>
-                  <div class="content-3">Healthcare</div>
-                </div>
-                <div class="bullet-2">
-                  <div class="text-wrapper-5">•</div>
-                  <div class="content-4">Banking</div>
-                </div>
-                <div class="bullet-2">
-                  <div class="text-wrapper-5">•</div>
-                  <div class="content-4">Consumers</div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="team-card-2">
-            <div class="text-wrapper-6">Interest</div>
-            <div class="row">
-              <div class="pill"><div class="text-wrapper-7">Design</div></div>
-              <div class="pill"><div class="text-wrapper-7">Photography</div></div>
-              <div class="pill"><div class="text-wrapper-7">Food</div></div>
-              <div class="pill"><div class="text-wrapper-7">Culture</div></div>
-            </div>
-            <div class="row-2">
-              <div class="pill"><div class="text-wrapper-7">Tech</div></div>
-              <div class="pill"><div class="text-wrapper-7">Movies</div></div>
-              <div class="pill"><div class="text-wrapper-7">Board Games</div></div>
-              <div class="pill-2"><div class="text-wrapper-7">Dog</div></div>
-            </div>
-          </div>
+      </section>
+
+      <div class="quote">“ Good things take time ”</div>
+
+      <section class="section" id="bio">
+        <h3>Bio</h3>
+        <p>
+          She currently lives in Sydney. She finished her Master's in Business and has just been promoted to Sales
+          Manager. She is currently single and likes to go out with friends on long holidays.
+        </p>
+      </section>
+
+      <section class="section">
+        <h3>Project Industry</h3>
+        <div class="list-item">Healthcare</div>
+        <div class="list-item">Banking</div>
+        <div class="list-item">Consumers</div>
+      </section>
+
+      <section class="section" id="interests">
+        <h3>Interests</h3>
+        <div class="pills">
+          <div class="pill">Design</div>
+          <div class="pill">Photography</div>
+          <div class="pill">Food</div>
+          <div class="pill">Culture</div>
+          <div class="pill">Tech</div>
+          <div class="pill">Movies</div>
+          <div class="pill">Board Games</div>
+          <div class="pill">Dog</div>
         </div>
-      </div>
-     </div>
+      </section>
+    </div>
   </body>
 </html>
