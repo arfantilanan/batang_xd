@@ -2,218 +2,294 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Batang XD Team</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Meet the Batang XD Team</title>
   <style>
-    @import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
+    @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto&display=swap");
+
+    :root {
+      --bg: #121212;
+      --card-bg: #1c1c1c;
+      --hover-bg: #2a2a2a;
+      --primary: #90caf9;
+      --text-light: #e0e0e0;
+      --text-subtle: #b0bec5;
+      --accent: #2196f3;
+    }
 
     * {
-      box-sizing: border-box;
-      -webkit-font-smoothing: antialiased;
-    }
-
-    html, body {
-      height: 100%;
-      background-color: #121212;
-      color: #e0e0e0;
-      font-family: 'Poppins', sans-serif;
       margin: 0;
+      padding: 0;
+      box-sizing: border-box;
     }
 
-    a {
+    body {
+      background-color: var(--bg);
+      font-family: 'Poppins', sans-serif;
+      color: var(--text-light);
+    }
+
+    header {
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #1a1a1a;
+      border-bottom: 1px solid #333;
+    }
+
+    header h1 {
+      font-size: 20px;
+      color: var(--primary);
+    }
+
+    nav a {
+      margin-left: 20px;
+      color: var(--text-subtle);
       text-decoration: none;
-      color: #90caf9;
-      transition: color 0.3s ease;
+      font-size: 14px;
     }
 
-    a:hover .name {
-      color: #ffffff;
+    nav a:hover {
+      color: var(--primary);
     }
 
-    header, section {
-      text-align: center;
+    .container {
       padding: 40px 20px;
+      max-width: 1200px;
+      margin: auto;
     }
 
     .section-header {
-      border-top: 6px solid #2196f3;
-      margin-bottom: 32px;
+      text-align: center;
+      margin-bottom: 40px;
     }
 
     .section-header h1 {
-      font-size: 48px;
-      color: #ffffff;
+      color: var(--primary);
+      font-size: 14px;
+      font-weight: 600;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    .section-header h2 {
+      color: white;
+      font-size: 32px;
       margin: 10px 0;
     }
 
     .section-header p {
-      font-size: 20px;
-      color: #b0bec5;
-      font-family: 'Roboto', sans-serif;
-      max-width: 720px;
+      max-width: 600px;
       margin: 0 auto;
+      font-size: 16px;
+      color: var(--text-subtle);
     }
 
     .team-grid {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 32px;
-      padding: 20px;
-      max-width: 1400px;
-      margin: auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 24px;
     }
 
     .team-card {
-      background-color: #1e1e1e;
-      border: 2px solid #333;
+      background-color: var(--card-bg);
       border-radius: 12px;
+      overflow: hidden;
+      transition: transform 0.2s ease, border 0.2s ease;
+      text-decoration: none;
+      color: inherit;
+      display: flex;
+      flex-direction: column;
+      align-items: center; /* Center content horizontally */
+      border: 2px solid transparent;
       padding: 20px;
-      width: 280px;
-      text-align: center;
-      transition: all 0.3s ease;
     }
 
     .team-card:hover {
-      transform: translateY(-8px);
-      border-color: #90caf9;
-      background-color: #2a2a2a;
+      transform: translateY(-4px);
+      border: 2px solid var(--primary);
     }
 
     .team-card img {
-      width: 160px;
-      height: 160px;
-      border-radius: 50%;
+      width: 120px; /* Adjust image size */
+      height: 120px; /* Adjust image size */
       object-fit: cover;
-      margin-bottom: 16px;
+      border-radius: 50%;
+      margin-bottom: 16px; /* Space between image and text */
     }
 
-    .team-card .name {
+    .team-card-content {
+      text-align: center;
+    }
+
+    .team-card h3 {
       font-size: 18px;
       font-weight: 600;
-      color: #ffffff;
       margin-bottom: 4px;
     }
 
-    .team-card .job-title {
-      font-size: 14px;
-      color: #b0bec5;
-      margin-bottom: 12px;
+    .job-title {
+      font-size: 13px;
+      color: var(--text-subtle);
+      margin-bottom: 8px;
     }
 
-    .team-card .bio {
-      font-size: 14px;
-      font-family: 'Roboto', sans-serif;
-      color: #9e9e9e;
-      line-height: 1.4;
-      margin-bottom: 12px;
+    .bio {
+      font-size: 13px;
+      color: #ccc;
+      margin-bottom: 10px;
     }
 
-    .social-icons {
+    .tags {
       display: flex;
       justify-content: center;
-      gap: 12px;
+      gap: 6px;
+      flex-wrap: wrap;
     }
 
-    .social-icons a {
-      color: #90caf9;
+    .tag {
+      background-color: #263238;
+      color: var(--primary);
+      font-size: 11px;
+      padding: 3px 10px;
+      border-radius: 20px;
+      font-family: 'Roboto', sans-serif;
+    }
+
+    .cta-button {
+      display: block;
+      background-color: var(--primary);
+      color: var(--bg);
+      padding: 12px 24px;
       font-size: 16px;
-      transition: color 0.3s ease;
+      border-radius: 50px;
+      text-align: center;
+      text-decoration: none;
+      margin-top: 40px;
+      font-weight: 600;
+      transition: background-color 0.3s ease;
     }
 
-    .social-icons a:hover {
-      color: #ffffff;
+    .cta-button:hover {
+      background-color: var(--accent);
     }
   </style>
 </head>
 <body>
-  <main>
-    <section class="section-header">
-      <h3 style="color: #90caf9;">Who We Are</h3>
-      <h1>Meet the Batang XD Team</h1>
-      <p>Creative, passionate, and slightly obsessive about clean UI and delightful user experiences. Get to know the people behind the pixels.</p>
-    </section>
+  <header>
+    <h1>Batang XD</h1>
+  </header>
 
-    <section class="team-grid">
-      <article class="team-card">
+  <div class="container">
+    <div class="section-header">
+      <h1>Who We Are</h1>
+      <h2>Meet the Batang XD Team</h2>
+      <p>Each designer is not just creative—they’re a user advocate, a collaborator, and a problem solver. Learn more about the minds behind the magic.</p>
+    </div>
+
+    <div class="team-grid">
+      <!-- Team Members (cards) -->
+      <a href="ange.html" class="team-card">
         <img src="img/ange.png" alt="Angelyn Sanjorjo-Lasa" />
-        <div class="name">Angelyn Sanjorjo-Lasa</div>
-        <div class="job-title">UI/UX Designer</div>
-        <p class="bio">Ange crafts smooth user flows with strong empathy and a dash of minimalism. Loves design systems.</p>
-        <div class="social-icons">
-          <a href="#"><i>🔗</i></a>
-          <a href="#"><i>🐦</i></a>
+        <div class="team-card-content">
+          <h3>Angelyn Sanjorjo-Lasa</h3>
+          <div class="job-title">UI/UX Designer</div>
+          <div class="bio">Focused on crafting intuitive and accessible designs.</div>
+          <div class="tags">
+            <span class="tag">Design Thinking</span>
+            <span class="tag">Wireframing</span>
+            <span class="tag">User Testing</span>
+          </div>
         </div>
-      </article>
+      </a>
 
-      <article class="team-card">
+      <a href="sherry.html" class="team-card">
         <img src="img/sherry.png" alt="Sherry Maie Regner" />
-        <div class="name">Sherry Maie Regner</div>
-        <div class="job-title">UI/UX Designer</div>
-        <p class="bio">Sherry brings delightful animations to life. Always exploring micro-interactions.</p>
-        <div class="social-icons">
-          <a href="#"><i>🔗</i></a>
-          <a href="#"><i>🐦</i></a>
+        <div class="team-card-content">
+          <h3>Sherry Maie Regner</h3>
+          <div class="job-title">UI/UX Designer</div>
+          <div class="bio">Dedicated to enhancing user engagement through seamless interactions.</div>
+          <div class="tags">
+            <span class="tag">Wireframing</span>
+            <span class="tag">UI Design</span>
+            <span class="tag">Accessibility</span>
+          </div>
         </div>
-      </article>
+      </a>
 
-      <article class="team-card">
+      <a href="char.html" class="team-card">
         <img src="img/char.png" alt="Charmaine Joy Cosinas" />
-        <div class="name">Charmaine Joy Cosinas</div>
-        <div class="job-title">UI/UX Designer</div>
-        <p class="bio">Char champions accessibility and user testing. Always iterating for better usability.</p>
-        <div class="social-icons">
-          <a href="#"><i>🔗</i></a>
-          <a href="#"><i>🐦</i></a>
+        <div class="team-card-content">
+          <h3>Charmaine Joy Cosinas</h3>
+          <div class="job-title">UI/UX Designer</div>
+          <div class="bio">Creating designs that are both functional and visually appealing.</div>
+          <div class="tags">
+            <span class="tag">User Flow</span>
+            <span class="tag">UI Prototyping</span>
+            <span class="tag">User Research</span>
+          </div>
         </div>
-      </article>
+      </a>
 
-      <article class="team-card">
+      <a href="marina.html" class="team-card">
         <img src="img/marina.png" alt="Deguzman Marina" />
-        <div class="name">Deguzman Marina</div>
-        <div class="job-title">UI/UX Designer</div>
-        <p class="bio">Marina is a layout wizard who loves grid systems and visual storytelling.</p>
-        <div class="social-icons">
-          <a href="#"><i>🔗</i></a>
-          <a href="#"><i>🐦</i></a>
+        <div class="team-card-content">
+          <h3>Deguzman Marina</h3>
+          <div class="job-title">UI/UX Designer</div>
+          <div class="bio">Designing with the goal to improve user satisfaction and engagement.</div>
+          <div class="tags">
+            <span class="tag">Usability</span>
+            <span class="tag">Wireframing</span>
+            <span class="tag">Interaction Design</span>
+          </div>
         </div>
-      </article>
+      </a>
 
-      <article class="team-card">
+      <a href="nolan.html" class="team-card">
         <img src="img/nolan.png" alt="Nolan Rey Tagle" />
-        <div class="name">Nolan Rey Tagle</div>
-        <div class="job-title">UI/UX Designer</div>
-        <p class="bio">Nolan is passionate about prototyping and design ops. Makes ideas real in record time.</p>
-        <div class="social-icons">
-          <a href="#"><i>🔗</i></a>
-          <a href="#"><i>🐦</i></a>
+        <div class="team-card-content">
+          <h3>Nolan Rey Tagle</h3>
+          <div class="job-title">UI/UX Designer</div>
+          <div class="bio">User experience advocate, creating designs that speak to the user’s needs.</div>
+          <div class="tags">
+            <span class="tag">Prototyping</span>
+            <span class="tag">UI Design</span>
+            <span class="tag">Research</span>
+          </div>
         </div>
-      </article>
+      </a>
 
-      <article class="team-card">
+      <a href="kiel.html" class="team-card">
         <img src="img/kiel.png" alt="Kiel Roy Azucena" />
-        <div class="name">Kiel Roy Azucena</div>
-        <div class="job-title">UI/UX Designer</div>
-        <p class="bio">Kiel bridges design and code. Master of smooth transitions and responsive interfaces.</p>
-        <div class="social-icons">
-          <a href="#"><i>🔗</i></a>
-          <a href="#"><i>🐦</i></a>
+        <div class="team-card-content">
+          <h3>Kiel Roy Azucena</h3>
+          <div class="job-title">UI/UX Designer</div>
+          <div class="bio">Passionate about designing user-centric interfaces and optimizing experiences.</div>
+          <div class="tags">
+            <span class="tag">UX Design</span>
+            <span class="tag">Wireframing</span>
+            <span class="tag">Figma</span>
+          </div>
         </div>
-      </article>
+      </a>
 
-      <article class="team-card">
+      <!-- Annie moved to the last -->
+      <a href="annie.html" class="team-card">
         <img src="img/annie.png" alt="Annie Fantilanan" />
-        <div class="name">Annie Fantilanan</div>
-        <div class="job-title">UI/UX Designer</div>
-        <p class="bio">Annie creates intuitive experiences with a keen eye for inclusive design.</p>
-        <div class="social-icons">
-          <a href="#"><i>🔗</i></a>
-          <a href="#"><i>🐦</i></a>
+        <div class="team-card-content">
+          <h3>Annie Fantilanan</h3>
+          <div class="job-title">UI/UX Designer</div>
+          <div class="bio">Passionate about crafting delightful user experiences through empathy and innovation.</div>
+          <div class="tags">
+            <span class="tag">Research</span>
+            <span class="tag">Figma</span>
+            <span class="tag">Prototyping</span>
+          </div>
         </div>
-      </article>
-    </section>
-  </main>
+      </a>
+    </div>
+
+  </div>
 </body>
 </html>
