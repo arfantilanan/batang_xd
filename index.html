@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+  <style>
+    @import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
+* {
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+}
+html,
+body {
+  margin: 0px;
+  height: 100%;
+}
+/* a blue color as a generic focus style */
+button:focus-visible {
+  outline: 2px solid #4a90e2 !important;
+  outline: -webkit-focus-ring-color auto 5px !important;
+}
+a {
+  text-decoration: none;
+}
+
+.desktop {
+  display: flex;
+  flex-wrap: wrap;
+  height: 1200px;
+  align-items: center;
+  justify-content: center;
+  gap: 48px 48px;
+  padding: 0px 52px 80px;
+  position: relative;
+  background-color: #ffffff;
+  border-top-width: 24px;
+  border-top-style: solid;
+  border-color: #65c9ff;
+}
+
+.desktop .section-header {
+  display: flex;
+  flex-direction: column;
+  width: 1336px;
+  height: 178px;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  padding: 0px 52px;
+  position: relative;
+}
+
+.desktop .header {
+  display: flex;
+  flex-direction: column;
+  width: 716px;
+  align-items: center;
+  gap: 4px;
+  position: relative;
+  flex: 0 0 auto;
+  background-color: transparent;
+}
+
+.desktop .text-wrapper {
+  position: relative;
+  align-self: stretch;
+  margin-top: -1.00px;
+  font-family: "Poppins-SemiBold", Helvetica;
+  font-weight: 600;
+  color: #282828;
+  font-size: 16px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: 26px;
+}
+
+.desktop .div {
+  position: relative;
+  align-self: stretch;
+  font-family: "Poppins-SemiBold", Helvetica;
+  font-weight: 600;
+  color: #282828;
+  font-size: 54px;
+  text-align: center;
+  letter-spacing: -1.00px;
+  line-height: 62px;
+}
+
+.desktop .p {
+  position: relative;
+  width: 692px;
+  font-family: "Roboto-Regular", Helvetica;
+  font-weight: 400;
+  color: #5e697f;
+  font-size: 20px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: 35px;
+}
+
+.desktop .cards {
+  display: flex;
+  flex-wrap: wrap;
+  width: 1336px;
+  height: 305px;
+  align-items: center;
+  justify-content: center;
+  gap: 48px 48px;
+  position: relative;
+}
+
+.desktop .row {
+  display: flex;
+  flex-wrap: wrap;
+  width: 1336px;
+  align-items: flex-start;
+  gap: 32px 32px;
+  position: relative;
+}
+
+.desktop .team-card {
+  display: flex;
+  flex-direction: column;
+  width: 310px;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  padding: 0px 0px 33px;
+  position: relative;
+  background-color: #ffffff;
+  border: 2px solid;
+  border-color: #dbdbdb;
+}
+
+.desktop .img {
+  position: relative;
+  width: 200px;
+  height: 200px;
+}
+
+.desktop .content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  padding: 0px 16px;
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+  flex: 0 0 auto;
+}
+
+.desktop .info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+  flex: 0 0 auto;
+}
+
+.desktop .title {
+  justify-content: flex-end;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+  flex: 0 0 auto;
+}
+
+.desktop .name {
+  position: relative;
+  align-self: stretch;
+  margin-top: -1.00px;
+  font-family: "Poppins-SemiBold", Helvetica;
+  font-weight: 600;
+  color: #282828;
+  font-size: 18px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: 30px;
+  text-decoration: underline;
+}
+
+.desktop .job-title {
+  position: relative;
+  align-self: stretch;
+  font-family: "Roboto-Regular", Helvetica;
+  font-weight: 400;
+  color: #3e3e59;
+  font-size: 14px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: 22px;
+}
+
+.desktop .title-2 {
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+  flex: 0 0 auto;
+}
+
+.desktop .row-2 {
+  display: flex;
+  flex-wrap: wrap;
+  width: 1336px;
+  align-items: center;
+  justify-content: center;
+  gap: 32px 32px;
+  position: relative;
+}
+
+
+  </style>
+  </head>
+  <body>
+    <div class="desktop" data-model-id="3:2">
+      <div class="section-header">
+        <header class="header">
+          <div class="text-wrapper">WHO WE ARE</div>
+          <div class="div">Batang XD Member</div>
+        </header>
+        <p class="p">
+          Just take a look - each member of the team is watching your every gesture and will hear your every whisper.
+        </p>
+      </div>
+      <div class="cards">
+        <div class="row">
+          <div class="team-card">
+            <img class="img" src="img/ange.png" />
+            <div class="content">
+              <div class="info">
+                <div class="title">
+                  <a href="https://ange.html" target="_blank" rel="noopener noreferrer"
+                    ><div class="name">Angelyn Sanjorjo-Lasa</div></a
+                  >
+                  <div class="job-title">UI/UX Designer</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="team-card">
+            <img class="img" src="img/sherry.png" />
+            <div class="content">
+              <div class="info">
+                <div class="title">
+                  <a href="https://sherry.html" target="_blank" rel="noopener noreferrer"
+                    ><div class="name">Sherry Maie Regner</div></a
+                  >
+                  <div class="job-title">UI/UX Designer</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="team-card">
+            <img class="img" src="img/char.png" />
+            <div class="content">
+              <div class="info">
+                <div class="title">
+                  <a href="https://char.html" target="_blank" rel="noopener noreferrer"
+                    ><div class="name">Charmaine Joy Cosinas</div></a
+                  >
+                  <div class="job-title">UI/UX Designer</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="team-card">
+            <img class="img" src="img/marina.png" />
+            <div class="content">
+              <div class="info">
+                <div class="title">
+                  <a href="https://marina.html" target="_blank" rel="noopener noreferrer"
+                    ><div class="name">Deguzman Marina</div></a
+                  >
+                  <div class="job-title">UI/UX Designer</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="cards">
+        <div class="row-2">
+          <div class="team-card">
+            <img class="img" src="img/nolan.png" />
+            <div class="content">
+              <div class="info">
+                <div class="title">
+                  <a href="https://nolan.html" target="_blank" rel="noopener noreferrer"
+                    ><div class="name">Nolan Rey Tagle</div></a
+                  >
+                  <div class="job-title">UI/UX Designer</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="team-card">
+            <img class="img" src="img/kiel.png" />
+            <div class="content">
+              <div class="info">
+                <div class="title">
+                  <a href="https://kiel.html" target="_blank" rel="noopener noreferrer"
+                    ><div class="name">Kiel Roy Azucena</div></a
+                  >
+                  <div class="job-title">UI/UX Designer</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="team-card">
+            <img class="img" src="img/annie.png" />
+            <div class="content">
+              <div class="info">
+                <div class="title">
+                  <a href="annie.html" target="_blank" rel="noopener noreferrer"
+                    ><div class="name">Annie Fantilanan</div></a
+                  >
+                  <div class="job-title">UI/UX Designer</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
