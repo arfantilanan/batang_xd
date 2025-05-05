@@ -1,0 +1,200 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Charmaine Dela Cruz - Profile</title>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;800&family=Poppins:wght@600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Manrope', sans-serif;
+      transition: all 0.3s ease;
+    }
+
+    body {
+      background-color: #121212;
+      color: #e0e0e0;
+      min-height: 100vh;
+    }
+
+    header {
+      background-color: #1f1f1f;
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 3px solid #65c9ff;
+    }
+
+    header h1 {
+      font-family: 'Poppins', sans-serif;
+      font-size: 24px;
+      color: #65c9ff;
+    }
+
+    nav a {
+      color: #e0e0e0;
+      margin-left: 20px;
+      text-decoration: none;
+      font-weight: 500;
+      position: relative;
+    }
+
+    nav a:hover {
+      color: #65c9ff;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    .profile {
+      background-color: #1e1e1e;
+      border-radius: 12px;
+      padding: 40px;
+      display: flex;
+      gap: 40px;
+      align-items: center;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+    }
+
+    .profile img {
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      border: 4px solid #65c9ff;
+      object-fit: cover;
+    }
+
+    .info {
+      flex: 1;
+    }
+
+    .info h2 {
+      font-size: 28px;
+      color: #65c9ff;
+      font-family: 'Poppins', sans-serif;
+      margin-bottom: 16px;
+    }
+
+    .info-item {
+      margin-bottom: 8px;
+    }
+
+    .info-item span {
+      font-weight: 600;
+      color: #aaa;
+      margin-right: 10px;
+    }
+
+    .quote {
+      font-size: 24px;
+      font-style: italic;
+      margin: 40px 0;
+      text-align: center;
+      color: #ccc;
+    }
+
+    .section {
+      background-color: #1e1e1e;
+      border-radius: 12px;
+      padding: 30px;
+      margin-bottom: 30px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+    }
+
+    .section h3 {
+      font-size: 20px;
+      color: #65c9ff;
+      margin-bottom: 16px;
+    }
+
+    .list-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 8px;
+    }
+
+    .list-item::before {
+      content: '•';
+      color: #65c9ff;
+      margin-right: 10px;
+    }
+
+    .pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .pill {
+      background-color: #333;
+      padding: 8px 16px;
+      border-radius: 20px;
+      font-size: 14px;
+      color: #fff;
+      cursor: default;
+    }
+
+    .pill:hover {
+      background-color: #65c9ff;
+      color: #000;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1><a href="index.html" style="text-decoration: none; color: #65c9ff;">Home</a></h1>
+    <nav>
+      <a href="#profile">Profile</a>
+      <a href="#bio">Bio</a>
+      <a href="#interests">Interests</a>
+    </nav>
+  </header>
+  <div class="container">
+    <section class="profile" id="profile">
+      <img src="img/marina.png" alt="Marina Deguzman" />
+      <div class="info">
+        <h2>Marina Deguzman</h2>
+        <div class="info-item"><span>Age:</span>30</div>
+        <div class="info-item"><span>Gender:</span>Female</div>
+        <div class="info-item"><span>Status:</span>Married</div>
+        <div class="info-item"><span>Education:</span>BS Business Administration</div>
+        <div class="info-item"><span>City:</span>Davao City</div>
+      </div>
+    </section>
+
+    <div class="quote">“Leadership is not a position or a title, it is action and example.”</div>
+
+    <section class="section" id="bio">
+      <h3>Bio</h3>
+      <p>
+        Marina is a seasoned operations manager known for her strategic mindset and people-first leadership. She balances team success and individual growth.
+      </p>
+    </section>
+
+    <section class="section">
+      <h3>Project Industry</h3>
+      <div class="list-item">E-commerce</div>
+      <div class="list-item">Finance</div>
+      <div class="list-item">Hospitality</div>
+    </section>
+
+    <section class="section" id="interests">
+      <h3>Interests</h3>
+      <div class="pills">
+        <div class="pill">Leadership</div>
+        <div class="pill">Reading</div>
+        <div class="pill">Cooking</div>
+        <div class="pill">Community Work</div>
+      </div>
+    </section>
+  </div>
+</body>
+</html>
